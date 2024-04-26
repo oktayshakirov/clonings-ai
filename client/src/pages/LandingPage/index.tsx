@@ -3,6 +3,8 @@ import React from "react";
 
 
 const SectionIntro = React.lazy(() => import("./SectionIntro"));
+const SectionLearnMore = React.lazy(() => import("./SectionLearnMore"));
+const SectionBenefits = React.lazy(() => import("./SectionBenefits"));
 
 
 const LandingPage: React.FC = () => {
@@ -15,6 +17,8 @@ const LandingPage: React.FC = () => {
             w={"100%"}
         >
             <SectionIntro />
+            <SectionLearnMore />
+            <SectionBenefits />
         </Flex>
     );
 };

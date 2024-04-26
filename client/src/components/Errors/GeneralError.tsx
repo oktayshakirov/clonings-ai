@@ -33,7 +33,7 @@ const GeneralError: React.FC<GeneralErrorProps> = (props) => {
             </Alert>
             {props.onRetry && (
                 <Button colorScheme={"brand.blue"} leftIcon={<FaHome />} onClick={props.onRetry}>
-                    Опитай пак
+                    TRY AGAIN
                 </Button>
             )}
             <Spacer />
