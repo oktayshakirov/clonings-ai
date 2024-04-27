@@ -6,45 +6,37 @@ function SectionLearnMore() {
       direction={{ base: 'column', md: 'row' }}
       align="center"
       justify="space-between"
-      px="6" 
-      py="10" 
-      height="60vh"
+      px="50px" 
+      height="80vh"
     >
       <Box
         flex="1"
         position="relative" 
       >
         <Image
-          src="/images/.png"
+          src="/images/Monetization.png"
           maxWidth="100%" 
-          height="auto"
-          borderRadius="full"
         />
       </Box>
 
       <VStack
         flex="1"
-        spacing="4" 
+        spacing="20px" 
         align="flex-start"
-        pl={{ md: '12' }} 
       >
-        <Text
-          fontSize="2xl" 
-          fontWeight="bold"
-          color="blue.800"
-        >
+        <Text fontSize="45px" fontWeight="600" color="highlightedTextTercer">
           Clone Yourself with AI & Earn Effortlessly
         </Text>
-        <Text
-          fontSize="md" 
-          color="gray.600"
-        >
-          Dream of being everywhere at once? Clonings.ai makes it happen. Clone yourself, let your digital twin work for you, and enjoy effortless earnings. No work, just gains. Sit back and watch the $$$ come in with Clonings.ai, your hassle-free platform to monetize your content.
+        <Text fontSize="17px">
+          Dream of being everywhere at once? 
+          Clonings.ai makes it happen. Clone yourself, let your digital twin work for you, and enjoy effortless earnings. 
+          No work, just gains. Sit back and watch the $$$ come in with Clonings.ai, your hassle-free platform to monetize your content.
         </Text>
         <Button 
-        colorScheme="blue" 
-        size="lg" 
-        borderRadius="32px"
+        bg="buttonPrimary"
+        color="buttonPrimaryText"
+        size="2xl" 
+        borderRadius="full"
         fontSize="20px"
         px="32px"
         py="16px"

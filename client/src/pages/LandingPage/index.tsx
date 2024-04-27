@@ -5,6 +5,9 @@ import React from "react";
 const SectionIntro = React.lazy(() => import("./SectionIntro"));
 const SectionLearnMore = React.lazy(() => import("./SectionLearnMore"));
 const SectionBenefits = React.lazy(() => import("./SectionBenefits"));
+const SectionHowItWorks = React.lazy(() => import("./SectionHowItWorks"));
+const SectionFAQ = React.lazy(() => import("./SectionFAQ"));
+const SectionGetStarted = React.lazy(() => import("./SectionGetStarted"));
 
 
 const LandingPage: React.FC = () => {
@@ -19,6 +22,9 @@ const LandingPage: React.FC = () => {
             <SectionIntro />
             <SectionLearnMore />
             <SectionBenefits />
+            <SectionHowItWorks />
+            <SectionFAQ />
+            <SectionGetStarted />
         </Flex>
     );
 };

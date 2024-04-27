@@ -20,6 +20,7 @@ const mainTheme = extendTheme({
             highlightedTextCard: { default: "brand.blue.50", _dark: "brand.blue.100" },
 
             highlightedTextSecondary: { default: "brand.green.500", _dark: "brand.green.500" },
+            highlightedTextTercer: { default: "brand.blue.600", _dark: "brand.blue.600" },
 
             navLink: { default: "brand.gray.400", _dark: "brand.gray.50" },
             navLinkSelected: { default: "brand.blue.900", _dark: "brand.blue.900" },
