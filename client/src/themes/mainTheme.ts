@@ -29,6 +29,7 @@ const mainTheme = extendTheme({
             buttonPrimary: { default: "brand.blue.500", _dark: "brand.blue.500" },
             buttonPrimaryMuted: { default: "brand.blue.100", _dark: "brand.gray.600" },
             buttonPrimaryText: { default: "white", _dark: "white" },
+            buttonPrimaryHover: {default: "brand.blue.400", _dark: "brand.blue.400"},
 
             buttonSecondary: { default: "brand.pink.400", _dark: "brand.pink.400" },
             buttonSecondaryMuted: { default: "brand.pink.100", _dark: "brand.pink.100" },

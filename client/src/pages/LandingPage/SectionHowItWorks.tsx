@@ -1,80 +1,103 @@
-import { Box, VStack, Circle, Text, HStack, Heading,  Center } from '@chakra-ui/react';
+import { Box, Center, Circle, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 
-
-const LineWithDot =  ({ isTextAbove = false }) => (
-  <Center height={isTextAbove ? "40px" : "70px"} position="relative">
-    <Box
-      position="absolute"
-      width="2px"
-      height="70px"
-      bgColor="primary"
-      transform="translateX(-50%)"
-    />
-    <Circle
-      position="absolute"
-      size="20px"
-      bgColor="primary"
-      top={isTextAbove ? "-50%" : "100%"}
-      left="50%"
-      transform="translate(-50%, -50%)"
-    />
-  </Center>
+const LineWithDot = ({ isTextAbove = false }) => (
+    <Center height={isTextAbove ? "40px" : "70px"} position="relative">
+        <Box position="absolute" width="2px" height="70px" bgColor="primary" transform="translateX(-50%)" />
+        <Circle
+            position="absolute"
+            size="20px"
+            bgColor="primary"
+            top={isTextAbove ? "-50%" : "100%"}
+            left="50%"
+            transform="translate(-50%, -50%)"
+        />
+    </Center>
 );
 
 interface StepProps {
-  number: string;
-  title: string;
-  description: string;
-  isTextAbove?: boolean; 
+    number: string;
+    title: string;
+    description: string;
+    isTextAbove?: boolean;
 }
 
 const Step: React.FC<StepProps> = ({ number, title, description, isTextAbove }) => (
-  <VStack spacing="30px" align="center" position="relative">
-    {isTextAbove && (
-      <>
-        <VStack pb="15px">
-          <Text fontSize="18px" color="primary" fontWeight="600">
-            {title}
-          </Text>
-          <Text color="primary" textAlign="center">
-            {description}
-          </Text>
-        </VStack>
-        <LineWithDot isTextAbove={isTextAbove} />
-      </>
-    )}
-    <Circle size="150px" bg="primary" color="highlighted">
-      <Text fontSize="80px">{number}</Text>
-    </Circle>
-    {!isTextAbove && (
-      <>
-        <LineWithDot isTextAbove={isTextAbove} />
-        <VStack pt="10px">
-          <Text fontSize="18px" color="primary" fontWeight="600">
-            {title}
-          </Text>
-          <Text color="primary" textAlign="center">
-            {description}
-          </Text>
-        </VStack>
-      </>
-    )}
-  </VStack>
+    <VStack>
+        <Box height="200px">
+            {isTextAbove && (
+                <>
+                    <VStack pb="50px">
+                        <Text fontSize="18px" color="primary" fontWeight="600">
+                            {title}
+                        </Text>
+                        <Text color="primary" textAlign="center">
+                            {description}
+                        </Text>
+                    </VStack>
+                    <LineWithDot isTextAbove />
+                </>
+            )}
+        </Box>
+        <Circle size="150px" bg="primary" color="highlighted" position="relative" zIndex="2">
+            <Text fontSize="80px">{number}</Text>
+        </Circle>
+        <Box height="200px" position="relative" width="100%">
+            {!isTextAbove && (
+                <>
+                    <LineWithDot />
+                    <VStack pt="15px">
+                        <Text fontSize="18px" color="primary" fontWeight="600">
+                            {title}
+                        </Text>
+                        <Text color="primary" textAlign="center">
+                            {description}
+                        </Text>
+                    </VStack>
+                </>
+            )}
+        </Box>
+    </VStack>
 );
 
-const HowItWorks: React.FC = () => (
-  <Box bg="highlighted" p="15px" display="flex" flexDirection="column" alignItems="center" justifyContent="center" h="40vw">
-    <Heading as="h2" size="2xl" color="primary" fontWeight="500" mb="100px" textAlign="center">
-      How it Works
-    </Heading>
-    <HStack spacing="40px" align="stretch">
-      <Step number="1" title="Create Your Account" description="Jumpstart your journey with just a few clicks." />
-      <Step number="2" title="Setup Your Clone" description="Use our user-friendly character builder to craft your clone, mirroring your personality." isTextAbove />
-      <Step number="3" title="Message Pricing" description="Decide how much followers pay per message. You're in control." />
-      <Step number="4" title="Content Selling" description="Choose the content and its price. Our AI does the selling for you." isTextAbove />
-      <Step number="5" title="Enjoy Passive Income" description="Kick back, relax, and watch your bank account grow." />
-    </HStack>
-  </Box>
+const SectionHowItWorks = () => (
+    <Box
+        bg="highlighted"
+        p="15px"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        height="750px"
+    >
+        <Heading as="h2" size="xl" color="primary" fontWeight="600" mb="50px" textAlign="center">
+            How it Works
+        </Heading>
+        <HStack maxWidth="100%" align="stretch">
+            <Step number="1" title="Create Your Account" description="Jumpstart your journey with just a few clicks." />
+            <Step
+                number="2"
+                title="Setup Your Clone"
+                description="Use our user-friendly character builder to craft your clone, mirroring your personality."
+                isTextAbove
+            />
+            <Step
+                number="3"
+                title="Message Pricing"
+                description="Decide how much followers pay per message. You're in control."
+            />
+            <Step
+                number="4"
+                title="Content Selling"
+                description="Choose the content and its price. Our AI does the selling for you."
+                isTextAbove
+            />
+            <Step
+                number="5"
+                title="Enjoy Passive Income"
+                description="Kick back, relax, and watch your bank account grow."
+            />
+        </HStack>
+    </Box>
 );
 
-export default HowItWorks;
+export default SectionHowItWorks;
