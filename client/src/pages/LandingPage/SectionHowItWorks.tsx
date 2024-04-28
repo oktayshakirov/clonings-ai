@@ -1,18 +1,5 @@
-import { Box, Center, Circle, HStack, Heading, Text, VStack } from "@chakra-ui/react";
-
-const LineWithDot = ({ isTextAbove = false }) => (
-    <Center height={isTextAbove ? "40px" : "70px"} position="relative">
-        <Box position="absolute" width="2px" height="70px" bgColor="primary" transform="translateX(-50%)" />
-        <Circle
-            position="absolute"
-            size="20px"
-            bgColor="primary"
-            top={isTextAbove ? "-50%" : "100%"}
-            left="50%"
-            transform="translate(-50%, -50%)"
-        />
-    </Center>
-);
+import { Box, Circle, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import LineWithDot from "./Components/LineWithDot";
 
 interface StepProps {
     number: string;
@@ -27,26 +14,26 @@ const Step: React.FC<StepProps> = ({ number, title, description, isTextAbove }) 
             {isTextAbove && (
                 <>
                     <VStack pb="50px">
-                        <Text fontSize="18px" color="primary" fontWeight="600">
+                        <Text fontSize="20px" color="primary" fontWeight="600" textAlign="center">
                             {title}
                         </Text>
                         <Text color="primary" textAlign="center">
                             {description}
                         </Text>
                     </VStack>
-                    <LineWithDot isTextAbove />
+                    <LineWithDot isDotAbove />
                 </>
             )}
         </Box>
-        <Circle size="150px" bg="primary" color="highlighted" position="relative" zIndex="2">
+        <Circle size="150px" bg="primary" color="highlighted" zIndex="2">
             <Text fontSize="80px">{number}</Text>
         </Circle>
-        <Box height="200px" position="relative" width="100%">
+        <Box height="200px">
             {!isTextAbove && (
                 <>
                     <LineWithDot />
                     <VStack pt="15px">
-                        <Text fontSize="18px" color="primary" fontWeight="600">
+                        <Text fontSize="20px" color="primary" fontWeight="600" textAlign="center">
                             {title}
                         </Text>
                         <Text color="primary" textAlign="center">
@@ -72,7 +59,7 @@ const SectionHowItWorks = () => (
         <Heading as="h2" size="xl" color="primary" fontWeight="600" mb="50px" textAlign="center">
             How it Works
         </Heading>
-        <HStack maxWidth="100%" align="stretch">
+        <HStack maxWidth="100%" display={{ base: "none", md: "flex" }}>
             <Step number="1" title="Create Your Account" description="Jumpstart your journey with just a few clicks." />
             <Step
                 number="2"
