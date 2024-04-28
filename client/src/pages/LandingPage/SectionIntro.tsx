@@ -36,7 +36,13 @@ const SectionIntro = () => {
                     </Badge>
                 </Text>
 
-                <Text fontSize={{ base: "17px", md: "24px" }} fontWeight="600" color="highlighted" mb="15px">
+                <Text
+                    fontSize={{ base: "17px", md: "24px" }}
+                    fontWeight="600"
+                    color="highlighted"
+                    mb="15px"
+                    textAlign="center"
+                >
                     Where Your Influence Creates Unlimited $$$
                 </Text>
 
