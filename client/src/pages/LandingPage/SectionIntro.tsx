@@ -14,9 +14,9 @@ const SectionIntro = () => {
             bgPos="top"
             pb="150px"
         >
-            <VStack w="50%" pb="20px">
+            <VStack w={{ base: "70%", md: "50%" }} pb="20px">
                 <Text
-                    fontSize={{ base: "35px", md: "48px" }}
+                    fontSize={{ base: "30px", md: "48px" }}
                     fontWeight="600"
                     color="highlightedTextTercer"
                     textAlign="center"
@@ -24,14 +24,13 @@ const SectionIntro = () => {
                 >
                     Welcome to the first AI avatar Marketplace{" "}
                     <Badge
-                        ml="15px"
+                        ml={{ base: "0", md: "15px" }}
                         bg="buttonPrimary"
                         _hover={{ bg: "buttonPrimaryHover" }}
                         color="primary"
-                        px="10px"
-                        py="10px"
+                        p="10px"
                         borderRadius="2xl"
-                        fontSize={{ base: "16px", md: "30px" }}
+                        fontSize={{ base: "20px", md: "30px" }}
                     >
                         Clonings.ai
                     </Badge>
