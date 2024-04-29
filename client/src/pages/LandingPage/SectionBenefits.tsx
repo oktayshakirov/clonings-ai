@@ -49,7 +49,7 @@ const SectionBenefits = () => {
     ];
 
     return (
-        <Box py="50px" maxW="90%">
+        <Box py="50px" maxW="1300px">
             <Text
                 color="highlightedTextTercer"
                 fontSize={{ base: "30px", md: "45px" }}
